@@ -1,3 +1,5 @@
+Final Code
+
 # Import required libraries
 import pandas as pd
 import dash
@@ -86,7 +88,7 @@ def get_scatter_chart(selected_site, payload_range):
     
     df_mask = df[(df['Payload Mass (kg)'] > low) & (df['Payload Mass (kg)'] < high)]
     
-    fig = px.scatter(df_mask, x='Payload Mass (kg)', y='class', color='Booster Version',
+    fig = px.scatter(df_mask, x='Payload Mass (kg)', y='class', color='Booster Version Category',
                      hover_data=['Payload Mass (kg)'])
     
     return fig
@@ -94,5 +96,6 @@ def get_scatter_chart(selected_site, payload_range):
 # Run the app
 if __name__ == '__main__':
     app.run_server()
+
 
 
